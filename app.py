@@ -23,7 +23,7 @@ def get_weather_data():
     response = requests.get(url, params=param)
     data = response.json()
     city = data['name']
-    return f"data : {data}, city:{city}"
+    return render_template('response.html', data=data)
 
 
 if __name__ == "__main__":
