@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <title>Weather Data</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ data['name'] }} Weather</h1>
+        <p>Temperature: {{ data['main']['temp'] }}°C</p>
+        <p>Weather: {{ data['weather'][0]['description'] }}</p>
+        <p>Wind Speed: {{ data['wind']['speed'] }} m/s</p>
+    </div>
+</body>
+</html>
